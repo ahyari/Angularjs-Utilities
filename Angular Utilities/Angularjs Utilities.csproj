@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <JSLintSkip>\assets\|\Content\|\Scripts\</JSLintSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,23 +42,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\debugging\controllers\" />
-    <Folder Include="app\debugging\directives\" />
-    <Folder Include="app\debugging\filters\" />
-    <Folder Include="app\debugging\services\" />
-    <Folder Include="app\debugging\views\" />
-    <Folder Include="app\logging\controllers\" />
-    <Folder Include="app\logging\directives\" />
-    <Folder Include="app\logging\filters\" />
-    <Folder Include="app\logging\views\" />
-    <Folder Include="app\shared\controllers\" />
-    <Folder Include="app\shared\directives\" />
-    <Folder Include="app\shared\filters\" />
-    <Folder Include="app\shared\services\" />
-    <Folder Include="app\shared\views\" />
-    <Folder Include="app\testing\directives\" />
-    <Folder Include="app\testing\filters\" />
-    <Folder Include="app\testing\services\" />
     <Folder Include="assets\css\" />
     <Folder Include="assets\img\" />
     <Folder Include="assets\js\" />
@@ -65,11 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.module.js" />
-    <Content Include="app\app.router.js" />
-    <Content Include="app\app.config.js" />
-    <Content Include="app\app.run.js" />
-    <Content Include="app\app.values.js" />
-    <Content Include="app\app.constants.js" />
     <Content Include="app\testing\app.module.js" />
     <Content Include="app\testing\controllers\debuggingTestController.js" />
     <Content Include="app\testing\controllers\loggingTestController.js" />
@@ -128,13 +107,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\JSLintNet.MSBuild.2.0.3\build\JSLintNet.MSBuild.targets" Condition="Exists('..\packages\JSLintNet.MSBuild.2.0.3\build\JSLintNet.MSBuild.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\JSLintNet.MSBuild.2.0.3\build\JSLintNet.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JSLintNet.MSBuild.2.0.3\build\JSLintNet.MSBuild.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -1,16 +1,14 @@
 ﻿(function (module) {
-    'use strict';
+    'use strict';    
 
-    module.controller('debuggingTestController', debuggingTestController);
+    function debuggingTestController($location) {
+        var vm = this;
+
+      
+    };
 
     debuggingTestController.$inject = ['$location'];
 
-    function debuggingTestController($location) {
-        /* jshint validthis:true */
-        var vm = this;
+    module.controller('debuggingTestController', debuggingTestController);
 
-        activate();
-
-        function activate() { }
-    }
-})( angular.module('testing'));
+}(angular.module('testing')));

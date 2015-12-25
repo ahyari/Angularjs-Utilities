@@ -1,24 +1,9 @@
 ﻿(function (module) {
     'use strict';
-
-    module.factory('loggingFactory', loggingFactory);
-
-    loggingFactory.$inject = ['$http', 'toastr'];
-
+    
     function loggingFactory($http, toastr) {
-        var url = '/api/logging/addlog';
-        var logs = [];
-
-        var service = {
-            addSuccess:addSuccess,
-            addInfo: addInfo,
-            addWarning: addWarning,
-            addError: addError,
-            addException: addException,
-            logs: logs
-        };
-
-        return service;
+        var url = '/api/logging/addlog',
+        logs = [];
 
         //#region public functios
         function addSuccess(message, pushToServer) {
@@ -61,5 +46,21 @@
             }
         };
         //#endregion
+
+
+        return {
+            addSuccess: addSuccess,
+            addInfo: addInfo,
+            addWarning: addWarning,
+            addError: addError,
+            addException: addException,
+            logs: logs
+        };
+        
     }
-})(angular.module('utilities.logging'));
+
+    loggingFactory.$inject = ['$http', 'toastr'];
+
+    module.factory('loggingFactory', loggingFactory);
+
+}(angular.module('utilities.logging')));

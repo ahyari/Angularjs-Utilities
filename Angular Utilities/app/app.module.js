@@ -5,6 +5,5 @@
         'shared',
         'utilities.logging',
         'utilities.debugging',
-        'testing'
     ]);
-})();
+}());

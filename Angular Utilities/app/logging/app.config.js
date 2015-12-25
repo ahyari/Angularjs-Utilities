@@ -3,9 +3,9 @@
 
     module.config(function ($provide, toastrConfig) {
 
-        $provide.decorator("$exceptionHandler", function ($delegate, $injector) {
+        $provide.decorator('$exceptionHandler', function ($delegate, $injector) {
             return function (exception, cause) {
-                var loggingFactory = $injector.get("loggingFactory");
+                var loggingFactory = $injector.get('loggingFactory');
                 loggingFactory.addException(exception);
                 $delegate(exception, cause);
             };
@@ -36,4 +36,4 @@
 
     });
 
-})(angular.module('utilities.logging'));
+}(angular.module('utilities.logging')));
