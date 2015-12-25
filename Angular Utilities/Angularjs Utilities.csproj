@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.module.js" />
+    <Content Include="app\utilities-bundle.js">
+      <DependentUpon>utilities-bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="app\utilities-bundle.min.js">
+      <DependentUpon>utilities-bundle.js.bundle</DependentUpon>
+    </Content>
     <Content Include="app\testing\app.module.js" />
     <Content Include="app\testing\controllers\debuggingTestController.js" />
     <Content Include="app\testing\controllers\loggingTestController.js" />
@@ -81,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\angular-animate.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app\utilities-bundle.js.bundle" />
+    <Content Include="app\utilities-bundle.min.js.map">
+      <DependentUpon>utilities-bundle.js.bundle</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

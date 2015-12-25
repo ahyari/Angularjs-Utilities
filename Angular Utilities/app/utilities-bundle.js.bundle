@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true" output="utilities-bundle.js">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+   <file>/app/shared/app.module.js</file>
+  <file>/app/debugging/app.module.js</file>
+  <file>/app/debugging/app.config.js</file>
+  <file>/app/logging/app.module.js</file>
+  <file>/app/logging/app.config.js</file>
+  <file>/app/logging/services/loggingFactory.js</file>
+  <file>/app/app.module.js</file>
+</bundle>
