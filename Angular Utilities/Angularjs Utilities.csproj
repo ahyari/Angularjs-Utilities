@@ -55,6 +55,9 @@
     <Folder Include="app\shared\filters\" />
     <Folder Include="app\shared\services\" />
     <Folder Include="app\shared\views\" />
+    <Folder Include="app\testing\directives\" />
+    <Folder Include="app\testing\filters\" />
+    <Folder Include="app\testing\services\" />
     <Folder Include="assets\css\" />
     <Folder Include="assets\img\" />
     <Folder Include="assets\js\" />
@@ -67,12 +70,17 @@
     <Content Include="app\app.run.js" />
     <Content Include="app\app.values.js" />
     <Content Include="app\app.constants.js" />
+    <Content Include="app\testing\app.module.js" />
+    <Content Include="app\testing\controllers\debuggingTestController.js" />
+    <Content Include="app\testing\controllers\loggingTestController.js" />
+    <Content Include="app\testing\views\debugginTest.html" />
     <Content Include="app\debugging\app.module.js" />
     <Content Include="app\debugging\app.config.js" />
     <Content Include="app\logging\app.config.js" />
     <Content Include="app\logging\services\loggingFactory.js" />
     <Content Include="app\shared\app.module.js" />
     <Content Include="app\logging\app.module.js" />
+    <Content Include="app\testing\views\loggingTest.html" />
     <Content Include="Content\angular-toastr.css" />
     <Content Include="Content\angular-toastr.min.css" />
     <Content Include="index.html" />
